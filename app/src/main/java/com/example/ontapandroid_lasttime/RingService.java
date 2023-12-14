@@ -13,6 +13,8 @@ public class RingService extends Service {
 
     private MediaPlayer mediaPlayer;
 
+
+
     @Nullable
     @Override
     public IBinder onBind(Intent intent) {
@@ -22,6 +24,8 @@ public class RingService extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         Uri defaultRingtoneUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_RINGTONE);
+
+
 
         if (defaultRingtoneUri != null) {
             mediaPlayer = MediaPlayer.create(this, defaultRingtoneUri);
